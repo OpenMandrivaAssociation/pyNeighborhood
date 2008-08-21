@@ -9,6 +9,8 @@ Group:		Networking/File transfer
 Url:		http://pyneighborhood.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/pyneighborhood/%{name}-%{version}-%{prel}.tar.bz2
 %py_requires -d
+Requires:	samba-client
+Requires:	pygtk2.0
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
