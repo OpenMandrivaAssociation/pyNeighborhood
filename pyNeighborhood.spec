@@ -3,7 +3,7 @@
 Summary:	S GTK+ 2 rewrite of a well-known LinNeighborhood tool
 Name:		pyNeighborhood
 Version:	0.5.0
-Release:	%mkrel -c %prel 1
+Release:	%mkrel -c %prel 2
 License:	GPLv3
 Group:		Networking/File transfer
 Url:		http://pyneighborhood.sourceforge.net/
@@ -12,6 +12,7 @@ Source0:	http://downloads.sourceforge.net/pyneighborhood/%{name}-%{version}-%{pr
 Requires:	samba-client
 Requires:	pygtk2.0
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
+BuildArch:	noarch
 
 %description
 pyNeighborhood is a the GUI frontend for samba tools, such as 
@@ -48,9 +49,9 @@ python setup.py install --root=%{buildroot}
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 
 %files -f %{name}.lang
-%defattr(644,root,root)
+%defattr(-,root,root)
 %doc README TODO Changelog
-%{_bindir}/
+%{_bindir}/*
 %{py_sitedir}/pyneighborhood
 %{py_sitedir}/*.egg*
 %{_datadir}/applications/*.desktop
