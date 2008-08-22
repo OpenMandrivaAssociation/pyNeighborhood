@@ -29,26 +29,20 @@ python setup.py build
 
 python setup.py install --root=%{buildroot}
 
-%find_lang %{name}
-
+%if %mdkversion < 200900
 %post
 %{update_menus}
-%if %mdkversion >= 200700
-%{update_desktop_database}
-%update_icon_cache hicolor
 %endif
 
+%if %mdkversion < 200900
 %postun
 %{clean_menus}
-%if %mdkversion >= 200700
-%{clean_desktop_database}
-%clean_icon_cache hicolor
 %endif
 
 %clean
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 
-%files -f %{name}.lang
+%files
 %defattr(-,root,root)
 %doc README TODO Changelog
 %{_bindir}/*
