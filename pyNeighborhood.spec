@@ -3,7 +3,7 @@
 Summary:	S GTK+ 2 rewrite of a well-known LinNeighborhood tool
 Name:		pyNeighborhood
 Version:	0.5.0
-Release:	%mkrel -c %prel 2
+Release:	%mkrel -c %prel 3
 License:	GPLv3
 Group:		Networking/File transfer
 Url:		http://pyneighborhood.sourceforge.net/
