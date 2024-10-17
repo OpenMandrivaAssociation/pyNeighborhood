@@ -6,7 +6,7 @@ Version:	0.5.0
 Release:	%mkrel -c %prel 6
 License:	GPLv3
 Group:		Networking/File transfer
-Url:		http://pyneighborhood.sourceforge.net/
+Url:		https://pyneighborhood.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/pyneighborhood/%{name}-%{version}-%{prel}.tar.bz2
 Buildrequires:	python
 Requires:	samba-client
